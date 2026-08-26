@@ -112,104 +112,81 @@ int main()
         (char*)"127.0.0.1"
     );
 
-    ini.Write*nteger(
+    ini.WriteInteger(
         "Rede",
-        "p*rta",
+        "porta",
         9090
     );
 
-    ret*rn 0;
+    return 0;
 }
 ```
 
 ---
 
-## 📸 Example Ou*put
+## 📸 Example Output
 
 ```text
-nome = teste-inifiles*porta = 8080
-mascara*= 0xFF00FF00
+nome = teste-inifiles porta = 8080
+mascara = 0xFF00FF00
 
-Conteudo carregado:
-*[Geral]
+Conteúdo carregado:
+[Geral]
     nome=teste-inifiles
 
-[*ede]
-    porta=*090
+[Rede]
+    porta=9090
     mascara=0xFF00FF00
-    end*reco=127.0.0.1
+    endereco=127.0.0.1
 
-O arquivo*sera atualizado ao finalizar o tes*e.
+O arquivo sera atualizado ao finalizar o teste.
 ```
 
 ---
-
-## 🖼 Screenshot
-
-Cri* um diretório:
-
-```text
-assets/
-``*
-
-Salve uma captura da execução co*o:
-
-```text
-assets/demo.png
-```
-
-*epois adicione ao README:
-
-```mark*own
-## Screenshot
-
-assets/demo.png*```
-
-*--
 
 ## 🔧 API Reference
 
-### Read*tring
+### ReadString
 
-*``cpp
+```cpp
 bool ReadString(
-    char* s*cao,
+    char* secao,
     char* variavel,
-    char**valor
+    char* valor
 );
 ```
 
-Reads a string value*from a specified section.
+Reads a string value from a specified section.
 
 ---
 
-##* ReadInteger
+## ReadInteger
 
 ```cpp
-int ReadInteg*r(
+int ReadInteger(
     char* secao,
-    char* vari*vel,
+    char* variavel,
     int defaultValue
 );
 ```
 
-*eads an integer value.
+Reads an integer value.
 
 ---
 
-### R*adHexadecimal
+### ReadHexadecimal
 
 ```cpp
-int ReadHexa*ecimal(
+int ReadHexadecimal(
     char* secao,
-    char**variavel,
+    char* variavel,
     int defaultValue
 );
-*``
+```
 
 Reads a hexadecimal value.
 
---*
+---
 
 ### WriteString
 
@@ -305,8 +282,6 @@ Then open a Pull Request.
 ## 👨‍🏫 Author
 
 ### Paulo Cesar Furlanetto Marques
-
-Professor DNS I
 
 GitHub:
 
